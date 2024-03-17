@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS `Spring_AM_01`;
+`Spring_AM_01``Spring_AM_01`DROP DATABASE IF EXISTS `Spring_AM_01`;
 CREATE DATABASE `Spring_AM_01`;
 USE `Spring_AM_01`;
 
@@ -510,18 +510,29 @@ DROP TABLE IF EXISTS CSV;
 
 CREATE TABLE APIarticle(
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    addr1 CHAR(10),
-    addr2 CHAR(10),
+    regDate DATETIME,
+    updateDate DATETIME,
+    memberId INT(10),
+    
+    title TEXT,
+    `body` TEXT,
+    
     areacode INT(10) NOT NULL,
     contenttypeid INT(10) NOT NULL,
-    firstimage CHAR(100),
-    firstimage2 CHAR(100),
-    mapx CHAR(10),
-    mapy CHAR(10),
+    
+    addr1 CHAR(100),
+    addr2 CHAR(100),
+    mapx CHAR(100),
+    mapy CHAR(100),
+    
+    firstimage TEXT,
+    firstimage2 TEXT,
+    
     mlevel INT(2),
-    tel CHAR(10),
-    title CHAR(20),
-    zipcode INT(4)
+    tel TEXT,
+    zipcode INT(4),
+    
+    hitcount INT(10)
 );
 
 DROP TABLE IF EXISTS APIarticle
